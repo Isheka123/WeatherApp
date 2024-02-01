@@ -44,19 +44,12 @@ function App() {
     // Invoke the fetchWeather function when query or units change
     fetchWeather();
   }, [query, units]);
-
-  // Function to determine background gradient based on temperature
-  const formatBackground = () => {
-    if (!weather) return "from-cyan-700 to-blue-700";
-    const threshold = units === "metric" ? 20 : 60;
-    if (weather.temp <= threshold) return "from-cyan-700 to-blue-700";
-    return "from-yellow-700 to-orange-700";
-  };
+  
 
  
   return (
     <div
-    className={`mx-auto max-w-screen-md lg:px-32 px-8 pb-5 py-1 rounded-lg lg:shadow-xl shadow-gray-400 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit ${formatBackground}`}
+    className={`mx-auto max-w-screen-md md:px-32 px-8 pb-9 py-1 rounded-lg lg:shadow-xl shadow-gray-400 bg-gradient-to-br from-cyan-700 to-blue-700 `}
   >
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
