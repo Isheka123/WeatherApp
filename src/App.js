@@ -62,7 +62,7 @@ function App() {
         </div>
       )}
       {/* Display a ToastContainer for notifications */}
-      <ToastContainer autoClose={1500} theme="colored" newestOnTop={true} />
+      <ToastContainer autoClose={2500} theme="colored" newestOnTop={true} />
     </div>
   );
 }
