@@ -10,7 +10,6 @@ import {
 } from "@iconscout/react-unicons";
 import { formatToLocalTime, iconUrlFromCode } from "../services/weatherService";
 
-
 const TemperatureAndDetails = ({
   weather: {
     icon,
@@ -64,38 +63,45 @@ const TemperatureAndDetails = ({
         </div>
       </div>
       {/* Display sunrise, sunset, high, and low temperatures */}
-      <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm py-3">
-        <UilSun />
-        <p className="font-light">
-          Rise:
-          <span className="font-medium ml-1">
-            {formatToLocalTime(sunrise, timezone, "hh:mm a")}
-          </span>
-        </p>
-        <p className="font-light">|</p>
-        <UilSunset />
-        <p className="font-light">
-          Set:
-          <span className="font-medium ml-1">
-            {formatToLocalTime(sunset, timezone, "hh:mm a")}
-          </span>
-        </p>
-        <p className="font-light">|</p>
-        <UilArrowUp />
-        <p className="font-light">
-          High:
-          <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
-        </p>
-        <p className="font-light">|</p>
-        <UilArrowDown />
-        <p className="font-light">
-          Low:
-          <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
-        </p>
-      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center  space-x-2 text-white text-sm gap-2 py-3">
+  <div className="flex items-center justify-center">
+    <UilSun />
+    <p className="font-light">
+      Rise:
+      <span className="font-medium ml-1">
+        {formatToLocalTime(sunrise, timezone, "hh:mm a")}
+      </span>
+    </p>
+  </div>
+  <div className="flex items-center">
+    {/* <p className="font-light">|</p> */}
+    <UilSunset />
+    <p className="font-light">
+      Set:
+      <span className="font-medium ml-1">
+        {formatToLocalTime(sunset, timezone, "hh:mm a")}
+      </span>
+    </p>
+  </div>
+  <div className="flex items-center">
+    {/* <p className="font-light">|</p> */}
+    <UilArrowUp />
+    <p className="font-light">
+      Min Temp:
+      <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
+    </p>
+  </div>
+  <div className="flex items-center">
+    {/* <p className="font-light">|</p> */}
+    <UilArrowDown />
+    <p className="font-light">
+      Max Temp:
+      <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
+    </p>
+  </div>
+</div>
     </div>
   );
 };
-
 
 export default TemperatureAndDetails;

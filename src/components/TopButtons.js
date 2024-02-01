@@ -50,10 +50,10 @@ const TopButtons = (props) => {
 
       {/* Menu Button for Medium and Small Screens */}
       <div className="lg:hidden">
-        <div className="flex justify-center items-center gap-24">
+        <div className="flex justify-center items-center gap-20">
           {/* Button to toggle the menu */}
           <button
-            className="text-white text-lg font-medium"
+            className="text-white text-lg font-medium "
             onClick={toggleMenu}
           >
             <FontAwesomeIcon icon={faBars} />

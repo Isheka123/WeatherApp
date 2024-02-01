@@ -1,13 +1,13 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    html{
-        font-family: "Poppins", sans-serif;
-        background-image: url("./assets/Sunny.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom right, #0077b6, #005fa6);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
 }

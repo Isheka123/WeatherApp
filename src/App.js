@@ -1,4 +1,3 @@
-
 import TopButtons from "./components/TopButtons";
 import { useEffect, useState } from "react";
 import Inputs from "./components/Inputs";
@@ -57,8 +56,8 @@ function App() {
  
   return (
     <div
-      className={`mx-auto max-w-screen-md lg:mt-5 px-4 sm:px-8 md:px-16 lg:px-32 py-4 pb-9 rounded-lg bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400  ${formatBackground} shadow-xl`}
-    >
+    className={`mx-auto max-w-screen-md md:px-16 lg:px-32 py-1 pb-9 rounded-lg lg:shadow-xl shadow-gray-400 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit ${formatBackground} ${window.innerWidth < 390 ? ' px-5' : ''}`}
+  >
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
       {weather && (

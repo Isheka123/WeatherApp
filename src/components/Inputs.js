@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { UilSearch } from "@iconscout/react-unicons";
 
-
 const Inputs = ({ setQuery, units, setUnits }) => {
   const [city, setCity] = useState("");
 
@@ -40,9 +39,11 @@ const Inputs = ({ setQuery, units, setUnits }) => {
           onChange={(e) => setCity(e.currentTarget.value)}
           onKeyPress={handleKeyPress}
           type="text"
-          className="text-xl font-light px-4 py-2 w-full shadow-xl focus:outline-none capitalize rounded-lg"
+          className="text-xl font-light px-4 py-2 w-full shadow-xl focus:outline-none capitalize rounded-lg
+    sm:px-2 sm:py-1" 
           placeholder="Search for city...."
         />
+
         <UilSearch
           size={25}
           className="text-white cursor-pointer ease-out hover:scale-125"
